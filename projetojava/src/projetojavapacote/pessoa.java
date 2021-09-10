@@ -102,4 +102,8 @@ public class pessoa {
 		this.serieMatriculado = serieMatriculado;
 	}
 
+	/* ira retornar true caso seja 18 ou mais se não false*/
+	public boolean pessoaMaiorIdade() {
+		return idade >= 18;
+	}
 }

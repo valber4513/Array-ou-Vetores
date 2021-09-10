@@ -13,18 +13,27 @@ public class testandoClassesFilhas {
 		
  Aluno aluno = new Aluno ();
    aluno.setNome("valber"); 
+   aluno.setIdade(16);
 
    
-   
    Diretor diretor = new Diretor();
-   diretor.setNome(" Valber");
+   diretor.setNome(" Alex ");
+   diretor.setIdade(50);
    
    Secretario secretario = new Secretario ();
+   secretario.setNome("jorge");
+   secretario.setIdade(18);
    
    System.out.println(aluno);
    System.out.println(diretor);
    System.out.println(secretario);
    
+   /* Imprimimos o resultado que foi criado na classe Herança Pai passando
+    * para todas as subClasses
+    */
+   System.out.println(aluno.pessoaMaiorIdade() + "____" +aluno.msgMaiorIdade());
+   System.out.println(diretor.pessoaMaiorIdade());
+   System.out.println(secretario.pessoaMaiorIdade());
    
 		}
 	
