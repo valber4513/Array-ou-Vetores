@@ -35,6 +35,11 @@ public class testandoClassesFilhas {
    System.out.println(diretor.pessoaMaiorIdade());
    System.out.println(secretario.pessoaMaiorIdade());
    
+   /*Aqui trazemos a classe metodo Abstrato que criamos */
+   System.out.println("Salário Aluno R$ = " + aluno.salario());
+   System.out.println("Salário Diretor R$ = " + diretor.salario());
+   System.out.println("Salário Secretário R$ = " + secretario.salario());
+   
 		}
 	
 	}

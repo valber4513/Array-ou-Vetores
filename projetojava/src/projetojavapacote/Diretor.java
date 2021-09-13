@@ -36,6 +36,14 @@ public class Diretor extends pessoa{
 		public void setTitulacao(String titulacao) {
 			this.titulacao = titulacao;
 		}
+		@Override
+		/*Conforme foi criado metodo Abstract na classe pai, é obrigatorio criar também nas classes filhas 
+		 * como exemplo abaixo
+		 */
+		public double salario() {
+			// TODO Auto-generated method stub
+			return 3900.78;
+		}
 		
 		
 		

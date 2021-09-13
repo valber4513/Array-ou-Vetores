@@ -39,4 +39,13 @@ public class Aluno extends pessoa {
 	public String msgMaiorIdade() {
 		return this.pessoaMaiorIdade() ? "Oba Aluno Maior de Idade" : " OPA Aluno Menor de Idade";
 	}
+
+	@Override
+	/*Conforme foi criado metodo Abstract na classe pai, é obrigatorio criar também nas classes filhas 
+	 * como exemplo abaixo
+	 */
+	public double salario() {
+		// TODO Auto-generated method stub
+		return 1500.90;
+	}
 }

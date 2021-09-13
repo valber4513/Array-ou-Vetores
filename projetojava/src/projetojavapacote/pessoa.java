@@ -5,7 +5,7 @@ import java.util.Objects;
 /*Classe herança, principal ou classe Pai. Todas as subclasses vão utilizar suas
  * string como base*/
 
-public class pessoa {
+public abstract class pessoa {
 
 	protected String nome;
 	protected int idade;
@@ -15,6 +15,11 @@ public class pessoa {
 	protected String nomeMae;
 	protected String serieMatriculado;
 
+	/*esse e o Metodo Abstrato, é obrigatorio para as classes filhas uma vez cadastrado na classe pai
+	 * 
+	 */
+	public abstract double salario();
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(dataNascimento, idade, nome, nomeMae, numeroCpf, registroGeral, serieMatriculado);
@@ -35,10 +40,7 @@ public class pessoa {
 				&& Objects.equals(serieMatriculado, other.serieMatriculado);
 	}
 
-	public pessoa() {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

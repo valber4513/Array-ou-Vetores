@@ -32,6 +32,14 @@ public class Secretario extends pessoa {
 				+ ", registroGeral=" + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae
 				+ ", serieMatriculado=" + serieMatriculado + "]";
 	}
+	@Override
+	/*Conforme foi criado metodo Abstract na classe pai, é obrigatorio criar também nas classes filhas 
+	 * como exemplo abaixo
+	 */
+	public double salario() {
+		// TODO Auto-generated method stub
+		return 1800.80*0.9;
+	}
 	
 	
 	
