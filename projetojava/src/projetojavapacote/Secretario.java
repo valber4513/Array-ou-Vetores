@@ -1,12 +1,34 @@
 package projetojavapacote;
 
-public class Secretario extends pessoa {
+import cursojava.interfaces.PermitirAcesso;
+
+/*Depois de termos criado pacote cursojava.interfaces,depois
+ * other interfaces, colocamos o metodo imlements. Lembrando que A classe PermitirAcesso é uma classe interface.
+ * Somente A classe Secretário tera acesso ou saberá que possui um autenticar não interferindo nas outras classes
+ */
+public class Secretario extends pessoa implements PermitirAcesso {
 
 /*Classe Filha da herança pessoa.java sempre utilizando no inicio " extends "*/
 		
 	private String	registro;
 	private String nivelCargo;
 	private String experienciaString;
+	
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	private String login;
+	private String senha;
+	
 	public String getRegistro() {
 		return registro;
 	}
@@ -39,6 +61,14 @@ public class Secretario extends pessoa {
 	public double salario() {
 		// TODO Auto-generated method stub
 		return 1800.80*0.9;
+	}
+	@Override
+	public boolean autenticar() {
+		
+		/*Login para acesso somente secrtário, caso não seja admin login ou senha causara erro no acesso
+		 * 
+		 */
+		return login.equals("admin") && senha.equals("admin");
 	}
 	
 	
