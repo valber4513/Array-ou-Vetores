@@ -8,33 +8,51 @@ import cursojava.interfaces.PermitirAcesso;
  */
 public class Secretario extends pessoa implements PermitirAcesso {
 
-/*Classe Filha da herança pessoa.java sempre utilizando no inicio " extends "*/
-		
-	private String	registro;
+	/*
+	 * Classe Filha da herança pessoa.java sempre utilizando no inicio " extends "
+	 */
+
+	private String registro;
 	private String nivelCargo;
 	private String experienciaString;
-	
+
 	private String login;
 	private String senha;
+	
+	public Secretario (String login, String senha) {
+		/*Utilizamos o this.login, para ele apontar as String login e senha criada na primeira vez*/
+		this.login = login;
+		this.senha=senha; 
 		
+	}
+	public Secretario() {
+		
+	}
+
 	public String getRegistro() {
 		return registro;
 	}
+
 	public void setRegistro(String registro) {
 		this.registro = registro;
 	}
+
 	public String getNivelCargo() {
 		return nivelCargo;
 	}
+
 	public void setNivelCargo(String nivelCargo) {
 		this.nivelCargo = nivelCargo;
 	}
+
 	public String getExperienciaString() {
 		return experienciaString;
 	}
+
 	public void setExperienciaString(String experienciaString) {
 		this.experienciaString = experienciaString;
 	}
+
 	@Override
 	public String toString() {
 		return "Secretario [registro=" + registro + ", nivelCargo=" + nivelCargo + ", experienciaString="
@@ -42,27 +60,29 @@ public class Secretario extends pessoa implements PermitirAcesso {
 				+ ", registroGeral=" + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae
 				+ ", serieMatriculado=" + serieMatriculado + "]";
 	}
+
 	@Override
-	/*Conforme foi criado metodo Abstract na classe pai, é obrigatorio criar também nas classes filhas 
-	 * como exemplo abaixo
+	/*
+	 * Conforme foi criado metodo Abstract na classe pai, é obrigatorio criar também
+	 * nas classes filhas como exemplo abaixo
 	 */
 	public double salario() {
 		// TODO Auto-generated method stub
-		return 1800.80*0.9;
+		return 1800.80 * 0.9;
 	}
-	
+
+	/*Autenticar, irar receber as String por parametro e depois irá chamar o autenticar() */
 	public boolean autenticar(String login, String senha) {
+		this.login = login;
+		this.senha = senha;
+		
 		return autenticar();
 	}
-	@Override
+
+
 	public boolean autenticar() {
-		
-		return false;
-	}
-	
-	
-	
-	
+
+		return login.equals("admin") &&  senha.equals("admin");
 	}
 
-
+}
