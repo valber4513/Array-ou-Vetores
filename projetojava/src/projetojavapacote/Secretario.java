@@ -14,21 +14,9 @@ public class Secretario extends pessoa implements PermitirAcesso {
 	private String nivelCargo;
 	private String experienciaString;
 	
-	public String getLogin() {
-		return login;
-	}
-	public void setLogin(String login) {
-		this.login = login;
-	}
-	public String getSenha() {
-		return senha;
-	}
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
 	private String login;
 	private String senha;
-	
+		
 	public String getRegistro() {
 		return registro;
 	}
@@ -62,13 +50,14 @@ public class Secretario extends pessoa implements PermitirAcesso {
 		// TODO Auto-generated method stub
 		return 1800.80*0.9;
 	}
+	
+	public boolean autenticar(String login, String senha) {
+		return autenticar();
+	}
 	@Override
 	public boolean autenticar() {
 		
-		/*Login para acesso somente secrtário, caso não seja admin login ou senha causara erro no acesso
-		 * 
-		 */
-		return login.equals("admin") && senha.equals("admin");
+		return false;
 	}
 	
 	

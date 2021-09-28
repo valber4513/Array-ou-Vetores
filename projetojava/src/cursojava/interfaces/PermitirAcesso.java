@@ -5,9 +5,13 @@ package cursojava.interfaces;
 
 public interface PermitirAcesso {
 
-public boolean autenticar(); /*apenas declaração do Metodo*/	
 	
-
+	
+/*Criamos duas String na classe INTERFACES que depois  será usada em permitir 
+ * acesso 
+ */
+public boolean  autenticar(String login,String senha);
+public boolean autenticar ();
 
 	
 }
