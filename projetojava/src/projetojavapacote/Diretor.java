@@ -1,7 +1,8 @@
 package projetojavapacote;
 
+import cursojava.interfaces.PermitirAcesso;
 
-public class Diretor extends pessoa{
+public class Diretor extends pessoa implements PermitirAcesso{
 	
 		/*Classe filha da herança pessoa.java*/
 		
@@ -9,7 +10,16 @@ public class Diretor extends pessoa{
 		private String tempoDirecao;
 		private String titulacao;
 		
+		/* para validar o Diretor, nesse caso tera que possui os mesmo atributos de secretário*/
+		private String login;
+		private String senha;
 		
+		public Diretor (String login, String senha){
+			this.login = login;
+			this.senha = senha;
+		}
+		
+	
 		
 		public String getRegistroEducacao() {
 			return registroEducacao;
@@ -45,8 +55,18 @@ public class Diretor extends pessoa{
 			return 3900.78;
 		}
 		
+		public boolean autenticar(String login, String senha) {
+			this.login = login;
+			this.senha = senha;
+			
+			return autenticar();
+		}
+
+
+		public boolean autenticar() {
+
+			return login.equals("valber") &&  senha.equals("valber");
 		
-		
-	}
+	}}
 
 
