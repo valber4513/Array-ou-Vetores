@@ -30,7 +30,16 @@ public class moduloObjeto1 {
 		}catch (Exception e) {/*fechamos o Código com (Exception e, e.printStackTrace), aqui o Sistema ira o local do erro, isso é fundamental
 		para o programador encontrar o erro e corrigir, caso não seja feito será necessário olhar linha por linha*/
 		e.printStackTrace();
+		System.out.println("Menssagem:   " + e.getMessage() );
+		/*Com esse Código voce
+		imprimi o Erro, traz a msg por exemplo , null */
 		
+		/*a Seguir,uma forma de deixar os Erros impressos mais customizado , ou seja vai trazer na ordem e organizado qual é qual */
+		for ( int pos = 0; pos <= e.getStackTrace().length; pos++) {
+		System.out.println("Classe do Erro  = " + e.getStackTrace()[pos].getClassName());
+		System.out.println("Método do Erro  = " + e.getStackTrace()[pos].getMethodName());
+		System.out.println("Linha do Erro  = " + e.getStackTrace()[pos].getLineNumber());
+		}
 		}
 
 	}
