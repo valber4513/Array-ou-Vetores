@@ -1,28 +1,31 @@
 package projetojavapacote;
 
+import javax.swing.JOptionPane;
+
 public class ArrayVetor {
 	public static void main(String[] args) {
-		 
-		/*Primeira Aula de Array */
-		
-		/*Array pode ser de todos os tipos de dados e Objetos */
-		
-		
-		/* Criando uma array, elas são reconhecidas por terem [ no inicio e , ] no fim*/ 
-		double [] notas = new double [3];
-		
-	
-		notas [ 0] = 9.8; /*Atribuindo um valor a uma array */
-		notas [1] = 8.7;
-		notas [2] = 9.7;
-		notas [3]= 9.9;
-		
-		
-		
-		System.out.println(notas);
-	}
-	
-		
-	}
 
+		
+		/*Tornando Array totalmente Dinamico onde o usuario escolhe quantas repetições e qual o valor será impresso */
+		String posicoes = JOptionPane.showInputDialog("Quantas posições o Array deve ter ? ");
+		
+		
+		double[] notas = new double[Integer.parseInt(posicoes)];
 
+		for (int pos = 0; pos < notas.length; pos++) {
+			String valor = JOptionPane.showInputDialog("Qual o valor da Posição Numero = " + (pos+1));
+			notas[pos] = Double.valueOf(valor);
+		}
+		
+		
+			/* notas.length, deixa mais dinamico , não sendo necessário
+			 * declarar novamente quantas repetições */
+			 
+		for (int pos = 0; pos < notas.length; pos++) {
+		
+		
+		
+			System.out.println("Nota " + (pos + 1 ) + " é = " + notas[pos]);
+		}
+	}
+	}
