@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class ArrayVetor {
 	public static void main(String[] args) {
 
-		
+		/* Alterado local para envio GitHub*/
 		/*Tornando Array totalmente Dinamico onde o usuario escolhe quantas repetições e qual o valor será impresso */
 		String posicoes = JOptionPane.showInputDialog("Quantas posições o Array deve ter ? ");
 		
