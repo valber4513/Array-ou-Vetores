@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class ArrayVetor {
 	public static void main(String[] args) {
 
-		/* Criação do ALuno1 */
+		/* Criação do ALuno   */
 		Aluno aluno = new Aluno();
 		aluno.setNome("Valber ");
 		aluno.setNomeEscola("JDEV Treinament");
